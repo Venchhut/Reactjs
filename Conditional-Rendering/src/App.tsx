@@ -1,42 +1,34 @@
 const App = () => {
+  const tasks = [
+    { id: 1, name: "Buy groceries", completed: true },
+    { id: 2, name: "Clean the house", completed: false },
+    { id: 3, name: "Finish project", completed: true },
+    { id: 4, name: "Prepare dinner", completed: false },
+  ];
   return (
     <div>
-      <h1>Conditional Rendering</h1>
-      <Items isLoggedIn={true} />
+      <h1>All Tasks</h1>
+      <Items tasks={tasks} />
     </div>
   );
 };
 
 export default App;
 
-// const Items = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
-//   if (isLoggedIn) {
-//     return <h2>Welcome to the app</h2>;
-//   } else {
-//     <h2>Please log in to continue</h2>;
-//   }
-// };
-
-// ternary operator
-
-// function Items({ isLoggedIn }: { isLoggedIn: boolean }) {
-//   return isLoggedIn ? (
-//     <p>Welcome to the app</p>
-//   ) : (
-//     <p>Please log in to continue</p>
-//   );
-// }
-
-// Rendering different component
-
-function Items({ isLoggedIn }: { isLoggedIn: boolean }) {
-  return isLoggedIn ? <Dasboard /> : <Singup />;
-}
-
-function Dasboard() {
-  return <div>hi</div>;
-}
-
-function Singup() {
-  return <p>Please sign up</p>;
-}
+export const Items = ({
+  tasks,
+}: {
+  tasks: { name: string; completed: boolean }[];
+}) => {
+  return (
+    <ul>
+      {tasks.map((task) =>
+        task.completed ? (
+          <li>{task.name}</li>
+        ) : (
+          <li style={{ color: "red" }}>{task.name}</li>
+        )
+      )}
+    </ul>
+  );
+};
