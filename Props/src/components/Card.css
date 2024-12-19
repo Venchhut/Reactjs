@@ -1,0 +1,19 @@
+.card {
+  border-radius: 20px;
+  width: 300px;
+  background-color: #fbf8ef; /* simplified color code */
+  overflow: hidden;
+  padding: 20px; /* increased padding for better content spacing */
+  margin: 10px; /* increased margin for better card spacing */
+  box-shadow: 0 0 10px rgba(250, 242, 242, 0.1); /* added subtle shadow for depth */
+  transition: transform 0.2s ease-in-out; /* added transition for smooth hover effect */
+}
+.card > img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: scale(1.05); /* added hover effect to scale up the card */
+}
