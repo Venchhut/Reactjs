@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #726e8f, #96aacf);
+}
+
+/* 🟢 Container with a Glassmorphism Effect */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* 🔵 Stylish Form */
+.form {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2.5rem;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 🔴 Form Title */
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+}
+
+/* 🔶 Error Message */
+.error {
+  text-align: center;
+  color: #ff4c4c;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* 🟡 Input Groups */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+
+/* 🟢 Input Fields */
+.input-group input {
+  padding: 0.9rem;
+  font-size: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.input-group input:focus {
+  border-color: #ffffff;
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* 🟣 Submit Button */
+.btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  background: #ffffff;
+  color: #4a90e2;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #f1f1f1;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* 🟠 Mobile Responsiveness */
+@media (max-width: 480px) {
+  .form {
+    padding: 2rem;
+    max-width: 90%;
+  }
+}
