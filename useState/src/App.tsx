@@ -38,11 +38,6 @@ const App = () => {
           name="topText"
           onChange={handleChange}
         />
-        <input
-          placeholder="Enter meme"
-          value={topText}
-          onChange={handleChange}
-        />
         <br />
         <input
           placeholder="Enter Text"
