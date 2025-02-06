@@ -1,13 +1,22 @@
-import { Button } from "@mantine/core";
-import Demo from "./Demo";
+import { AppShell, Container } from "@mantine/core";
+import BlogPostList from "./components/BlogPostList";
+import Footer from "./components/Footer";
+import Sidebar from "./components/Sidebar";
+import TopNav from "./components/TopNav";
 
-const App = () => {
+export default function App() {
   return (
-    <div>
-      <Button variant="filled">welcome</Button>
-      <Demo />
-    </div>
+    <AppShell
+      header={{ height: 60 }}
+      navbar={{ width: 250, breakpoint: "sm", collapsed: { mobile: true } }}
+      padding="md"
+    >
+      <TopNav />
+      <Sidebar />
+      <Container size="xl">
+        <BlogPostList />
+      </Container>
+      <Footer />
+    </AppShell>
   );
-};
-
-export default App;
+}
