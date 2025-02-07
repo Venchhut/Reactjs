@@ -1,0 +1,143 @@
+:root {
+  --bg-color: #262729;
+  --container-bg: #ffffff;
+  --primary-text: #333;
+  --secondary-text: #555;
+  --error-color: #d32f2f;
+  --card-bg: #fff;
+  --card-border: #e0e0e0;
+  --avatar-border: #007bff;
+  --link-color: #0366d6;
+  --link-hover: #0056b3;
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  width: 90%;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--container-bg);
+  box-shadow: var(--box-shadow);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: var(--primary-text);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.loading,
+.error {
+  font-size: 1.5rem;
+  color: var(--secondary-text);
+  text-align: center;
+  margin-top: 50px;
+}
+
+.error {
+  color: var(--error-color);
+}
+
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.user-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid var(--card-border);
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid var(--avatar-border);
+  margin-bottom: 10px;
+}
+
+.username {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.username:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .user-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .user-card {
+    padding: 15px;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .username {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .user-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .avatar {
+    width: 70px;
+    height: 70px;
+  }
+
+  .username {
+    font-size: 0.9rem;
+  }
+}
