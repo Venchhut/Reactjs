@@ -1,45 +1,76 @@
-/*Filename - App.css*/
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+}
+
+.meme-form {
+  background: #444;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  border: 2px solid #ffcc00;
+}
+
+.meme-form input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #ffcc00;
+  border-radius: 5px;
+  background: #333;
+  color: white;
+}
+
+.meme-form button {
+  background-color: #ffcc00;
+  color: #333;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.meme-form button:hover {
+  background-color: #ff9900;
+}
 
 .meme {
   position: relative;
-  width: 59%;
-  max-width: 500px;
-  max-height: 500px;
-  margin: auto;
+  display: inline-block;
+  margin-top: 20px;
   text-align: center;
 }
 
-.meme > img {
-  margin: auto;
-  height: 50%;
-  max-width: 500px;
-  max-height: 500px;
+.meme img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  border: 3px solid #ffcc00;
 }
 
-.meme > h2 {
+.meme h2 {
   position: absolute;
-  width: 80%;
-  text-align: center;
+  width: 90%;
   left: 50%;
   transform: translateX(-50%);
-  margin: 15px 0;
-  padding: 0 5px;
-  font-family: impact, sans-serif;
-  font-size: 1em;
-  text-transform: uppercase;
-  color: rgb(241, 238, 238);
-  letter-spacing: 1px;
-}
-
-.meme > .bottom {
-  bottom: 0;
-}
-
-.meme > .top {
-  top: 0;
-}
-
-form {
-  padding-top: 25px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
   text-align: center;
+}
+
+.top {
+  top: 10px;
+}
+
+.bottom {
+  bottom: 10px;
 }
