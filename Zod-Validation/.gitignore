@@ -1,3 +1,8 @@
+# Ignore all files
+*
+
+# Except app.tsx
+!app.tsx
 # Logs
 logs
 *.log
