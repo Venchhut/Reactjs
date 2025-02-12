@@ -1,0 +1,5 @@
+:root {
+  --search-input-width: 500px;
+  --search-input-border-radius: 20px;
+  --search-input-border: 1px solid #ccc;
+}

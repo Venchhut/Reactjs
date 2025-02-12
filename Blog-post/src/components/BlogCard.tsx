@@ -1,25 +1,18 @@
 import { Card, Image, Text, Group } from "@mantine/core";
+import { Post } from "../data/Post";
 
-export default function BlogCard({
-  title,
-  author,
-  image,
-}: {
-  title: string;
-  author: string;
-  image: string;
-}) {
+export default function BlogCard({ data }: { data: Post }) {
   return (
-    <Card shadow="sm" padding="lg">
+    <Card withBorder shadow="sm" padding="lg">
       <Card.Section>
-        <Image src={image} height={160} />
+        <Image src={data.image} height={160} />
       </Card.Section>
       <Text fw={500} size="lg" mt="md">
-        {title}
+        {data.title}
       </Text>
       <Group mt="xs">
         <Text size="sm" c="dimmed">
-          By {author}
+          By {data.author}
         </Text>
       </Group>
     </Card>

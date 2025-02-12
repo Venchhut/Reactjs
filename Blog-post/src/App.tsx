@@ -1,21 +1,25 @@
-import { AppShell, Container } from "@mantine/core";
+import { AppShell } from "@mantine/core";
 import BlogPostList from "./components/BlogPostList";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
-import TopNav from "./components/TopNav";
+import TopNav from "./components/TopNav/TopNav";
 
 export default function App() {
   return (
     <AppShell
       header={{ height: 60 }}
-      navbar={{ width: 250, breakpoint: "sm", collapsed: { mobile: true } }}
+      navbar={{ width: 300, breakpoint: "sm" }}
       padding="md"
     >
-      <TopNav />
-      <Sidebar />
-      <Container size="xl">
+      <AppShell.Header>
+        <TopNav />
+      </AppShell.Header>
+      <AppShell.Navbar mt="sm">
+        <Sidebar />
+      </AppShell.Navbar>
+      <AppShell.Main>
         <BlogPostList />
-      </Container>
+      </AppShell.Main>
       <Footer />
     </AppShell>
   );
